@@ -10,7 +10,7 @@ interface Props extends Omit<Omit<LinkProps, "href">, "as"> {
   as?: string;
   children?: any;
   className?: string;
-  params?: object;
+  params?: Record<string, unknown>;
   prefixGroup?: boolean;
 }
 

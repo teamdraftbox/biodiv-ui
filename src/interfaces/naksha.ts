@@ -1,5 +1,5 @@
 export interface BodyPart {
-  entity?: {};
+  entity?: Record<string, unknown>;
   headers?: {
     [name: string]: string[];
   };
@@ -103,7 +103,7 @@ export interface Element {
   attributes?: NamedNodeMap;
 }
 export interface FormDataBodyPart {
-  entity?: {};
+  entity?: Record<string, unknown>;
   headers?: {
     [name: string]: string[];
   };
@@ -132,7 +132,7 @@ export interface FormDataContentDisposition {
   name?: string;
 }
 export interface FormDataMultiPart {
-  entity?: {};
+  entity?: Record<string, unknown>;
   headers?: {
     [name: string]: string[];
   };
@@ -162,7 +162,7 @@ export interface MediaType {
   wildcardSubtype?: boolean;
 }
 export interface MultiPart {
-  entity?: {};
+  entity?: Record<string, unknown>;
   headers?: {
     [name: string]: string[];
   };

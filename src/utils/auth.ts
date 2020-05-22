@@ -109,9 +109,9 @@ export const generateSession = async (
 /**
  * 🌈 On the spot authorization wrapped in a one magical promise
  *
- * @returns {Promise<object>}
+ * @returns {Promise<Record<string, unknown>>}
  */
-export const waitForAuth = (): Promise<object> => {
+export const waitForAuth = (): Promise<Record<string, unknown>> => {
   return new Promise((resolve, reject) => {
     const u = getNookie(TOKEN.USER);
     u?.id ? resolve() : emit(AUTHWALL.INIT, { resolve, reject });

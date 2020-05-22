@@ -183,7 +183,7 @@ export interface Follow {
 export interface Geometry {
   envelope?: Geometry;
   factory?: GeometryFactory;
-  userData?: {};
+  userData?: Record<string, unknown>;
   srid?: number; // int32
   precisionModel?: PrecisionModel;
   coordinate?: Coordinate;
@@ -480,7 +480,7 @@ export interface ObservationUserPermission {
 export interface Point {
   envelope?: Geometry;
   factory?: GeometryFactory;
-  userData?: {};
+  userData?: Record<string, unknown>;
   coordinates?: Coordinate[];
   coordinateSequence?: CoordinateSequence;
   coordinate?: Coordinate;
@@ -593,6 +593,7 @@ export interface ShowData {
   };
   allRecoVotes?: AllRecoSugguestions[];
   observationNearBy?: ObservationNearBy[];
+  activityCount?: number; // int32
 }
 export interface SimilarObservation {
   observationId?: number; // int64

@@ -1,3 +1,11 @@
+export interface BulkGroupPostingData {
+  userGroupList?: number /* int64 */[];
+  ugObvFilterDataList?: UserGroupObvFilterData[];
+}
+export interface BulkGroupUnPostingData {
+  userGroupList?: number /* int64 */[];
+  observationList?: number /* int64 */[];
+}
 export interface CustomFieldCreateData {
   name?: string;
   dataType?: string;
@@ -56,7 +64,6 @@ export interface CustomFieldPermission {
   allowedCfId?: number /* int64 */[];
 }
 export interface CustomFieldUGData {
-  userGroupId?: number; // int64
   customFieldId?: number; // int64
   defaultValue?: string;
   displayOrder?: number; // int32
@@ -130,12 +137,6 @@ export interface Newsletter {
   showInFooter?: boolean;
   sticky?: boolean;
 }
-export interface ObservationLatLon {
-  observationId?: number; // int64
-  latitude?: number; // double
-  longitude?: number; // double
-  mailData?: MailData;
-}
 export interface ObservationMailData {
   observationId?: number; // int64
   location?: string;
@@ -144,6 +145,17 @@ export interface ObservationMailData {
   scientificName?: string;
   commonName?: string;
   authorId?: number; // int64
+}
+export interface ShowFilterRule {
+  hasSpatialRule?: boolean;
+  spartialRuleList?: UserGroupSpatialData[];
+  hasTaxonomicRule?: boolean;
+  taxonomicRuleList?: UserGroupTaxonomicRule[];
+  hasUserRule?: boolean;
+  hasCreatedOnDateRule?: boolean;
+  createdOnDateRuleList?: UserGroupCreatedOnDateRule[];
+  hasObservedOnDateRule?: boolean;
+  observedOnDateRule?: UserGroupObservedonDateRule[];
 }
 export interface UserGroup {
   id?: number; // int64
@@ -168,11 +180,84 @@ export interface UserGroup {
   filterRule?: string;
   newFilterRule?: string;
 }
+export interface UserGroupAddMemebr {
+  founderList?: number /* int64 */[];
+  moderatorList?: number /* int64 */[];
+  memberList?: number /* int64 */[];
+}
+export interface UserGroupCreateData {
+  allowUserToJoin?: boolean;
+  description?: string;
+  homePage?: string;
+  icon?: string;
+  domainName?: string;
+  name?: string;
+  neLatitude?: number; // double
+  neLongitude?: number; // double
+  swLatitude?: number; // double
+  swLongitude?: number; // double
+  theme?: string;
+  languageId?: number; // int64
+  sendDigestMail?: boolean;
+  newFilterRule?: string;
+  invitationData?: UserGroupInvitationData;
+  cfUGMappingData?: CustomFieldUGData[];
+}
+export interface UserGroupCreatedOnDateRule {
+  id?: number; // int64
+  userGroupId?: number; // int64
+  fromDate?: string; // date-time
+  toDate?: string; // date-time
+  isEnabled?: boolean;
+}
+export interface UserGroupEditData {
+  allowUserToJoin?: boolean;
+  description?: string;
+  homePage?: string;
+  icon?: string;
+  domainName?: string;
+  name?: string;
+  neLatitude?: number; // double
+  neLongitude?: number; // double
+  swLatitude?: number; // double
+  swLongitude?: number; // double
+  theme?: string;
+  languageId?: number; // int64
+  sendDigestMail?: boolean;
+  newFilterRule?: string;
+}
+export interface UserGroupFilterDate {
+  fromDate?: string; // date-time
+  toDate?: string; // date-time
+}
+export interface UserGroupFilterEnable {
+  filterId?: number; // int64
+  isEnabled?: boolean;
+  filterType?: string;
+}
+export interface UserGroupFilterRemove {
+  filterName?: string;
+  filterId?: number; // int64
+}
+export interface UserGroupFilterRuleInputData {
+  hasUserRule?: boolean;
+  taxonomicIdList?: number /* int64 */[];
+  spartialDataList?: string[];
+  createdOnDateList?: UserGroupFilterDate[];
+  observedOnDateList?: UserGroupFilterDate[];
+}
 export interface UserGroupIbp {
   id?: number; // int64
   name?: string;
   icon?: string;
   webAddress?: string;
+}
+export interface UserGroupInvitationData {
+  userGroupId?: number; // int64
+  founderIds?: number /* int64 */[];
+  moderatorsIds?: number /* int64 */[];
+  founderEmail?: string[];
+  moderatorsEmail?: string[];
 }
 export interface UserGroupMailData {
   id?: number; // int64
@@ -183,10 +268,38 @@ export interface UserGroupMailData {
 export interface UserGroupMappingCreateData {
   mailData?: MailData;
   userGroups?: number /* int64 */[];
+  ugFilterData?: UserGroupObvFilterData;
+}
+export interface UserGroupObservedonDateRule {
+  id?: number; // int64
+  userGroupId?: number; // int64
+  fromDate?: string; // date-time
+  toDate?: string; // date-time
+  isEnabled?: boolean;
+}
+export interface UserGroupObvFilterData {
+  observationId?: number; // int64
+  latitude?: number; // double
+  longitude?: number; // double
+  createdOnDate?: string; // date-time
+  observedOnDate?: string; // date-time
+  taxonomyId?: number; // int64
+}
+export interface UserGroupSpatialData {
+  id?: number; // int64
+  userGroupId?: number; // int64
+  spatialData?: string;
+  isEnabled?: boolean;
 }
 export interface UserGroupSpeciesGroup {
   userGroupId?: number; // int64
   speciesGroupId?: number; // int64
+}
+export interface UserGroupTaxonomicRule {
+  id?: number; // int64
+  userGroupId?: number; // int64
+  taxonomyId?: number; // int64
+  isEnabled?: boolean;
 }
 export interface UserGroupWKT {
   wkt?: string;
