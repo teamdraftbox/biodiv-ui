@@ -1,0 +1,72 @@
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box
+} from "@chakra-ui/core";
+import useTranslation from "@configs/i18n/useTranslation";
+import React from "react";
+
+import DataQuality from "./data-quality";
+import MediaType from "./media-type";
+import Name from "./name";
+import SpeciesGroupsFilter from "./species-groups";
+import TaxonBrowser from "./taxon-browser";
+
+export default function FiltersList() {
+  const { t } = useTranslation();
+
+  return (
+    <Accordion defaultIndex={[0]} allowMultiple={true}>
+      <AccordionItem>
+        <AccordionHeader>
+          <div>{t("FILTERS.SPECIES_GROUP.TITLE")}</div>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPanel>
+          <SpeciesGroupsFilter />
+        </AccordionPanel>
+      </AccordionItem>
+
+      <AccordionItem>
+        {({ isExpanded }) => (
+          <>
+            <AccordionHeader>
+              <div>{t("FILTERS.TAXON_BROWSER.TITLE")}</div>
+              <AccordionIcon />
+            </AccordionHeader>
+            <AccordionPanel>{isExpanded && <TaxonBrowser />}</AccordionPanel>
+          </>
+        )}
+      </AccordionItem>
+
+      <AccordionItem>
+        <AccordionHeader>
+          <div>{t("FILTERS.NAME.TITLE")}</div>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPanel>
+          <Name />
+        </AccordionPanel>
+      </AccordionItem>
+
+      <AccordionItem>
+        <AccordionHeader>
+          <div>{t("FILTERS.DATA_QUALITY.TITLE")}</div>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPanel>
+          <DataQuality />
+        </AccordionPanel>
+      </AccordionItem>
+
+      <MediaType />
+
+      <Box textAlign="center" p={4}>
+        More filters coming soon 🎉
+      </Box>
+    </Accordion>
+  );
+}
