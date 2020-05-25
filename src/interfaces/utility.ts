@@ -51,8 +51,8 @@ export interface ParsedName {
   verbatim?: string;
   normalized?: string;
   authorship?: string;
-  details?: {}[];
-  positions?: {}[];
+  details?: Record<string, unknown>[];
+  positions?: Record<string, unknown>[];
   surrogate?: boolean;
   virus?: boolean;
   hybrid?: boolean;

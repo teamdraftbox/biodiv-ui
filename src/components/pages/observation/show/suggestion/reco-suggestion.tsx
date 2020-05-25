@@ -28,7 +28,7 @@ interface IRecoSuggestionProps {
   isLocked: boolean;
   recoUpdated;
   permission?;
-  permissionOverride?: boolean;
+  permissionOverride?: any;
 }
 
 export default function RecoSuggestion({

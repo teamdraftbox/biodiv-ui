@@ -28,6 +28,7 @@ module.exports = {
     "react/prop-types": "off",
     "react/display-name": "off",
     "react/no-children-prop": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
 
     "no-console": ["error", { allow: ["warn", "error", "debug"] }]
   }

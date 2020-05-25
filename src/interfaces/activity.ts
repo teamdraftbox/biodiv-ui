@@ -88,6 +88,15 @@ export interface UserGroupActivity {
   userGroupName?: string;
   webAddress?: string;
   featured?: string;
+  reason?: string;
+}
+export interface UserGroupActivityLogging {
+  activityDescription?: string;
+  rootObjectId?: number; // int64
+  subRootObjectId?: number; // int64
+  rootObjectType?: string;
+  activityId?: number; // int64
+  activityType?: string;
 }
 export interface UserGroupMailData {
   id?: number; // int64

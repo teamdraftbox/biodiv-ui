@@ -80,13 +80,13 @@ export interface ObservationData {
   l: ObservationListPageMapper[];
   ml: ObservationListMinimalData[];
   ag: MapAggregationResponse;
-  mvp: object;
+  mvp: Record<string, unknown>;
   n: number;
   hasMore: boolean;
 }
 
 export interface Omit {
-  <T extends object, K extends [...(keyof T)[]]>(obj: T, ...keys: K): {
+  <T extends Record<string, unknown>, K extends [...(keyof T)[]]>(obj: T, ...keys: K): {
     [K2 in Exclude<keyof T, K[number]>]: T[K2];
   };
 }
