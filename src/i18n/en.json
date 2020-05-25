@@ -53,6 +53,12 @@
         "VALIDATED": "Validated"
       }
     },
+    "LOCATION": {
+      "MAP": {
+        "TITLE": "Map"
+      },
+      "TITLE": "Location"
+    },
     "MEDIA": {
       "AUDIO": "Audio",
       "IMAGE": "Image",

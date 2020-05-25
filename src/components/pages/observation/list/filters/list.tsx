@@ -10,6 +10,7 @@ import useTranslation from "@configs/i18n/useTranslation";
 import React from "react";
 
 import DataQuality from "./data-quality";
+import Location from "./location";
 import MediaType from "./media-type";
 import Name from "./name";
 import SpeciesGroupsFilter from "./species-groups";
@@ -49,6 +50,16 @@ export default function FiltersList() {
         </AccordionHeader>
         <AccordionPanel>
           <Name />
+        </AccordionPanel>
+      </AccordionItem>
+
+      <AccordionItem>
+        <AccordionHeader>
+          <div>{t("FILTERS.LOCATION.TITLE")}</div>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPanel>
+          <Location />
         </AccordionPanel>
       </AccordionItem>
 

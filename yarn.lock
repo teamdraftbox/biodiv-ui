@@ -5998,10 +5998,10 @@ mute-stream@0.0.8:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-naksha-components-react@^3.0.6-alpha:
-  version "3.0.6-alpha"
-  resolved "https://registry.yarnpkg.com/naksha-components-react/-/naksha-components-react-3.0.6-alpha.tgz#4e73357bb8360c59d062c7f176d4184c9f2fbc39"
-  integrity sha512-L3GprHneJe3tHISabDu+t9XVLxUQhB6FCatN1LfoRrGmD2z/8L6oln8bn0IpfxK0BZ6IkuQU2MIv5Sex6+/2ng==
+naksha-components-react@^3.0.8-r3-alpha:
+  version "3.0.8-r3-alpha"
+  resolved "https://registry.yarnpkg.com/naksha-components-react/-/naksha-components-react-3.0.8-r3-alpha.tgz#08bd6f186d701027f1d76df575dcd88da321e90d"
+  integrity sha512-XnUG9lkq41yGy3KldStTRVtmNYd50wa9fml4rXP4jpq0qQgdnc7k5HR8q8/XRle/iptm18FJd1zpMvofbWWXNg==
   dependencies:
     "@chakra-ui/core" "^0.8.0"
     "@emotion/core" "^10.0.28"
@@ -7513,7 +7513,7 @@ react-select@^3.1.0:
     react-input-autosize "^2.2.2"
     react-transition-group "^4.3.0"
 
-react-spring@^8.0.27:
+react-spring@8.0.27, react-spring@^8.0.27:
   version "8.0.27"
   resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
   integrity sha512-nDpWBe3ZVezukNRandTeLSPcwwTMjNVu1IDq9qA/AMiUqHuRN4BeSWvKr3eIxxg1vtiYiOLy4FqdfCP5IoP77g==

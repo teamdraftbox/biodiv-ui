@@ -38,7 +38,7 @@
     "immer": "^6.0.6",
     "indian-number-format": "^1.0.4",
     "mq-styled-components": "^2.0.1",
-    "naksha-components-react": "^3.0.6-alpha",
+    "naksha-components-react": "^3.0.8-r3-alpha",
     "nanoid": "^3.1.9",
     "next": "^9.4.2",
     "next-env": "^1.1.1",
