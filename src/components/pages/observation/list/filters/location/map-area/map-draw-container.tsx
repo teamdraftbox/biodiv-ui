@@ -1,14 +1,9 @@
-import styled from "@emotion/styled";
+import { Box } from "@chakra-ui/core";
 import useObservationFilter from "@hooks/useObservationFilter";
 import { MAP_CENTER } from "@static/constants";
 import { stringToFeature } from "@utils/location";
 import { MapAreaDraw } from "naksha-components-react";
 import React, { useMemo } from "react";
-
-const MapDrawBox = styled.div`
-  position: relative;
-  height: 22rem;
-`;
 
 const defaultViewPort = {
   latitude: MAP_CENTER.lat,
@@ -33,7 +28,7 @@ export default function MapDrawContainer() {
   };
 
   return (
-    <MapDrawBox>
+    <Box position="relative" h="22rem">
       <MapAreaDraw
         defaultViewPort={defaultViewPort}
         defaultFeatures={defaultFeatures}
@@ -41,6 +36,6 @@ export default function MapDrawContainer() {
         onFeaturesChange={handleOnFeatureChange}
         isPolygon={true}
       />
-    </MapDrawBox>
+    </Box>
   );
 }
