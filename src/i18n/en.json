@@ -101,7 +101,7 @@
       "TITLE": "Taxon Browser"
     },
     "TIME": {
-      "CREATED_ON": "Created on",
+      "CREATED_ON": "Date Created",
       "MAX_DATE": "Maximum Date",
       "MIN_DATE": "Minimum Date",
       "MONTH": {
@@ -117,9 +117,9 @@
         "NOV": "November",
         "OCT": "October",
         "SEP": "September",
-        "TITLE": "Month"
+        "TITLE": "Month Observed"
       },
-      "OBSERVED_ON": "Observed on",
+      "OBSERVED_ON": "Date Observed",
       "TITLE": "Time"
     },
     "TITLE": "Filters",

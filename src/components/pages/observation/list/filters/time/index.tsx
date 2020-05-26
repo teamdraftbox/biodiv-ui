@@ -15,6 +15,13 @@ export default function TimeFilter() {
       overflow="hidden"
       allowMultiple={true}
     >
+      <CheckboxFilterPanel
+        translateKey="FILTERS.TIME.MONTH."
+        filterKey="month"
+        options={MONTHS}
+        statKey="groupMonth"
+      />
+
       <DateRangeFilter
         translateKey="FILTERS.TIME.OBSERVED_ON"
         filterKey={{ min: "minDate", max: "maxDate" }}
@@ -23,13 +30,6 @@ export default function TimeFilter() {
       <DateRangeFilter
         translateKey="FILTERS.TIME.CREATED_ON"
         filterKey={{ min: "createdOnMinDate", max: "createdOnMaxDate" }}
-      />
-
-      <CheckboxFilterPanel
-        translateKey="FILTERS.TIME.MONTH."
-        filterKey="month"
-        options={MONTHS}
-        statKey="groupMonth"
       />
     </Accordion>
   );
