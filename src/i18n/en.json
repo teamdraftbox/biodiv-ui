@@ -100,6 +100,28 @@
       "SEARCH_RESULTS": "Showing ${currentIndex} of ${resultsCount}",
       "TITLE": "Taxon Browser"
     },
+    "TIME": {
+      "CREATED_ON": "Created on",
+      "MAX_DATE": "Maximum Date",
+      "MIN_DATE": "Minimum Date",
+      "MONTH": {
+        "APR": "April",
+        "AUG": "August",
+        "DEC": "December",
+        "FEB": "February",
+        "JAN": "January",
+        "JUL": "July",
+        "JUN": "June",
+        "MAR": "March",
+        "MAY": "May",
+        "NOV": "November",
+        "OCT": "October",
+        "SEP": "September",
+        "TITLE": "Month"
+      },
+      "OBSERVED_ON": "Observed on",
+      "TITLE": "Time"
+    },
     "TITLE": "Filters",
     "TOGGLE": "Toggle Filters"
   },

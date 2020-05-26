@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/core";
 import { FORM_DATEPICKER_CHANGE } from "@static/events";
 import { formatDate, parseDate } from "@utils/date";
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Flatpickr from "react-flatpickr";
 import { useListener } from "react-gbus";
@@ -62,13 +61,6 @@ const DatePickerField = ({
 
   return (
     <FormControl isInvalid={form.errors[name] && true} mb={mb} {...props}>
-      <Head>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://unpkg.com/flatpickr@4.6.3/dist/themes/material_blue.css"
-        />
-      </Head>
       <FormLabel htmlFor={name}>{label}</FormLabel>
       <InputGroup>
         <Flatpickr

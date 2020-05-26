@@ -13,11 +13,17 @@ import React from "react";
 import FilterStat from "../stat";
 
 export default function CheckboxFilterPanel({ filterKey, translateKey, statKey = null, options }) {
-  const { filter, addFilter } = useObservationFilter();
+  const { filter, addFilter, removeFilter } = useObservationFilter();
   const defaultValue = filter?.[filterKey] ? filter?.[filterKey]?.split(",") : [];
   const { t } = useTranslation();
 
-  const handleOnChange = (v) => addFilter(filterKey, v.toString());
+  const handleOnChange = (v) => {
+    if (v.length > 0) {
+      addFilter(filterKey, v.toString());
+    } else {
+      removeFilter(filterKey);
+    }
+  };
 
   return (
     <AccordionItem>

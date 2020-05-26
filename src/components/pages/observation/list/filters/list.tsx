@@ -15,6 +15,7 @@ import MediaType from "./media-type";
 import Name from "./name";
 import SpeciesGroupsFilter from "./species-groups";
 import TaxonBrowser from "./taxon-browser";
+import TimeFilter from "./time";
 
 export default function FiltersList() {
   const { t } = useTranslation();
@@ -60,6 +61,16 @@ export default function FiltersList() {
         </AccordionHeader>
         <AccordionPanel>
           <Location />
+        </AccordionPanel>
+      </AccordionItem>
+
+      <AccordionItem>
+        <AccordionHeader>
+          <div>{t("FILTERS.TIME.TITLE")}</div>
+          <AccordionIcon />
+        </AccordionHeader>
+        <AccordionPanel>
+          <TimeFilter />
         </AccordionPanel>
       </AccordionItem>
 
